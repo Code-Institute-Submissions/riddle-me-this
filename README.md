@@ -1,6 +1,6 @@
 # Pratical Python Project
 
-### Overview
+## Overview
 #### What is the purpose of this web app?
 This is a quiz game that will generate a riddle for the user to work out.
 #### What does it do?
@@ -8,25 +8,25 @@ The user will submit answers for what they thing the answer of the riddle is. If
 #### How does it work?
 For each riddle, if the user submits the correct answer for the riddle on their first attempt, they'll score 5 points and progress to the next answer. If they guess incorrectly, they'll lose a point from the points that they can win that round. Each guess would take away another possible mark until they get to 0 which will then take them to the next riddle. After they've reached and answered the final riddle, their final score will submit to the scoreboard.
 
-### To initilise and edit
+## To initilise and edit
 Open up GITBASH
 Use ls to navigate to your working directory
 Type: npm install
 Type: npm start
 
-### Features
+## Features
 #### Existing Features
 #### Features Left to Implement
 Username form
 A scoreboard
 Riddle-image generator
 
-### Tech Used
+## Tech Used
 #### Some of the tech used includes:
 **Flask** A Python based micro-framework used to serve the data from the server to the web based interface.
 **Bootstrap 4** I used **Bootstrap** to give my project a simple, responsive layout.
 
-### Contributing
+## Contributing
 #### Getting the code up and running
 1. Firstly you will need to clone this repository by running the ```git clone <https://github.com/DeanFlint/riddle-me-this.git>``` command
 2. After you've that you'll need to make sure that you have **npm** installed. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
