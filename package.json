@@ -1,7 +1,7 @@
 {
-  "name": "cv_website",
+  "name": "riddle-me-this",
   "version": "1.0.0",
-  "description": "cv website using bs4",
+  "description": "Practical Python Project",
   "main": "index.js",
   "scripts": {
     "start": "gulp"
