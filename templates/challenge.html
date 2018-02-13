@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible"
+		content="ie=edge">
+	<title>  </title>
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+<main>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-grey mb-5">
+        <div class="container">
+          <a class="navbar-brand p-1 m-1" href="#">Riddle Me This</a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link m-1" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link m-1 active" href="#">Challenge</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link m-1" href="#">Scoreboard</a>
+                  </li class="nav-item">
+              </ul>
+            </div>
+          </div>
+    </nav>
+</header>
+
+<section id="content" class="container">
+  <div class="row">
+    
+    <div class="col-md-7">
+      
+      <div class="mb-3">
+        <img src="../static/images/question.jpeg"></img>
+      </div>
+      
+      
+      <div class="m-auto d-flex flex-row justify-content-around align-items-center">
+        <form method="POST">
+          <input type="text" id="answer" name="answer"><button>Submit Answer</button>
+        </form>
+      </div>
+      
+    </div>
+
+    <div class="col-md-5 text-center">
+      <h3>Incorrect Answers</h3>
+      <p>Welcome to Riddle Me This!</p>
+    </div>
+    
+  </div>
+</section>
+
+<footer class="footer p-3 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 m-auto text-center">
+        <p>This was created by Dean Flint.
+        <br/>Want to know who that is? Here are some clues...</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 m-auto d-flex flex-row justify-content-around align-items-center">
+        <i class="fa fa-github"></i>
+  			<i class="fa fa-facebook"></i>
+  			<i class="fa fa-linkedin"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+</main>
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
