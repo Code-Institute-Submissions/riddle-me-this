@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("challenge.html")
     
+
 app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)
