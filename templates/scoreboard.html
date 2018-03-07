@@ -12,7 +12,7 @@
 	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-
+<main>
 <header>
     <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-grey mb-5">
         <div class="container">
@@ -24,10 +24,10 @@
                       <a class="nav-link pl-2 m-1" href="{{ url_for('index') }}">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link pl-2 m-1 active" href="{{ url_for('challenge') }}">Challenge</a>
+                      <a class="nav-link pl-2 m-1" href="{{ url_for('challenge') }}">Challenge</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link pl-2 m-1" href="{{ url_for('scoreboard') }}">Scoreboard</a>
+                      <a class="nav-link pl-2 m-1 active" href="{{ url_for('scoreboard') }}">Scoreboard</a>
                   </li class="nav-item">
               </ul>
             </div>
@@ -38,25 +38,72 @@
 <section id="content" class="container">
   <div class="row">
     
-    <div class="col-md-7">
-      
-      <div class="mb-3">
-        <img src="../static/images/question.jpeg"></img>
-      </div>
-      
-      
-      <div class="m-auto d-flex flex-row justify-content-around align-items-center mt-3">
-        <form method="POST">
-          <input type="text" id="username" name="username"><button>Username</button>
-        </form>
-      </div>
-      
+    <div class="col-md-8 m-auto">
+      <h1 class="page-title">Scoreboard</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Dean</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Luke</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Nic</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Dean</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Luke</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Nic</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>Dean</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>Luke</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>Nic</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>Nic</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="col-md-5 mt-3 text-center">
-      <h3>Incorrect Answers</h3>
-      <p>Welcome to Riddle Me This!</p>
-    </div>
+    
     
   </div>
 </section>
@@ -78,6 +125,7 @@
     </div>
   </div>
 </footer>
+</main>
 
 
 <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>

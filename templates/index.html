@@ -6,7 +6,7 @@
 		content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible"
 		content="ie=edge">
-	<title>  </title>
+	<title>Riddle Me This</title>
 	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
@@ -21,13 +21,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link m-1" href="#">Home</a>
+                      <a class="nav-link pl-2 m-1 active" href="{{ url_for('index') }}">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link m-1" href="#">Challenge</a>
+                      <a class="nav-link pl-2 m-1" href="{{ url_for('challenge') }}">Challenge</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link m-1" href="#">Scoreboard</a>
+                      <a class="nav-link pl-2 m-1" href="{{ url_for('scoreboard') }}">Scoreboard</a>
                   </li class="nav-item">
               </ul>
             </div>
@@ -45,7 +45,7 @@
   <div class="row">
     <div class="col-md-6 m-auto p-3 mt-2">
       <p>Welcome to Riddle Me This! <br />This quiz will test your ability to think outside the box. <br />When you're ready, click on the 'Begin Challenge' button below. You can also view the scoreboard here.</p>
-      <div class="m-auto d-flex flex-row justify-content-around align-items-center"><button>Start Challenge</button></div>
+      <div class="m-auto d-flex flex-row justify-content-around align-items-center"><a href="{{ url_for('challenge') }}"><button>Start Challenge</button></a></div>
     </div>
   </div>
 </section>
