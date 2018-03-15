@@ -40,7 +40,7 @@
       <h1 class="text-center text-capitalize">{{username}}</h1>
 
       <div class="mb-3">
-        <img src="../static/images/riddle4.png"></img>
+        <img src="../../static/images/riddle4.png"></img>
       </div>
       
       
@@ -54,7 +54,9 @@
 
     <div class="col-md-5 mt-3 text-center">
       <h3>Incorrect Answers</h3>
-      <p>Welcome to Riddle Me This!</p>
+      {% for attempt in attempts %}
+      </p> {{ attempt }} </p>
+      {% endfor %}
     </div>
     
   </div>
@@ -64,7 +66,7 @@
       <p>Score: {{score}} </p>
     </div>
     <div class="col-md-6">
-      <p>Attempts remaining: {{attempts}}</p>
+      <p>Attempts remaining: {{rem_attempts}}</p>
     </div>
   
 </section>
