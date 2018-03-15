@@ -24,9 +24,6 @@
                       <a class="nav-link pl-2 m-1" href="{{ url_for('index') }}">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link pl-2 m-1 active" href="{{ url_for('challenge') }}">Challenge</a>
-                  </li>
-                  <li class="nav-item">
                       <a class="nav-link pl-2 m-1" href="{{ url_for('scoreboard') }}">Scoreboard</a>
                   </li class="nav-item">
               </ul>
@@ -40,14 +37,16 @@
     
     <div class="col-md-7">
       
+      <h1 class="text-center text-capitalize">{{username}}</h1>
+
       <div class="mb-3">
-        <img src="../static/images/question.jpeg"></img>
+        <img src="../static/images/riddle1.png"></img>
       </div>
       
       
       <div class="m-auto d-flex flex-row justify-content-around align-items-center mt-3">
         <form method="POST">
-          <input type="text" id="username" name="username"><button>Username</button>
+          <input type="text" id="answer" name="answer"><button>Answer</button>
         </form>
       </div>
       
@@ -55,10 +54,21 @@
 
     <div class="col-md-5 mt-3 text-center">
       <h3>Incorrect Answers</h3>
-      <p>Welcome to Riddle Me This!</p>
+      {% for attempt in attempts %}
+      </p> {{ attempt }} </p>
+      {% endfor %}
     </div>
     
   </div>
+  
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <p>Score: {{score}} </p>
+    </div>
+    <div class="col-md-6">
+      <p>Attempts remaining: {{attempts_num}}</p>
+    </div>
+  
 </section>
 
 <footer class="p-3 bg-grey">
@@ -83,5 +93,6 @@
 <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
 </body>
 </html>
