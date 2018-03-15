@@ -26,21 +26,38 @@ After they've reached and answered the final riddle, their final score will subm
 ## To initilise and edit
 
 1. Download Python 3: (http://www.python.org/download/)
-2. Create a new directory to store the project 
-``` $ mkdir riddle_me_this ```
-``` $ cd riddle_me_this ```
-3. Clone the repository 
-``` $ git clone <https://github.com/DeanFlint/riddle-me-this.git>```
+
+2. Clone the repository 
+
+``` $ git clone https://github.com/DeanFlint/riddle-me-this.git```
+
+3. Move into the folder
+
+``` cd riddle-me-this ```
+
 4. After you've that you'll need to make sure that you have **npm** installed. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
+
 ``` $ npm install ```
+
 ``` $ npm start ```
+
 5. Create and activate your virtual env:
-``` $ python3 -m venv env ```
-``` $ source env/bin/activate ```
+
+``` $ python -m venv env ```
+
+``` $ source env/Scripts/activate ```
+
 6. Install Flask with pip:
-``` (env)$ pip install flask==0.12.2 ```
-7. Run the python file:
-``` python3 app.py ```
+
+``` (env)$ pip install flask ```
+
+7. Open app.py using a text editor to amend the port number on the bottom line, for example:
+
+``` app.run(host=os.getenv('IP'), port=5005, debug=True) ```
+
+8. Run the python file:
+
+``` python app.py ```
 
 ## Features
 #### Existing Features
