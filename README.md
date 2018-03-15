@@ -25,14 +25,25 @@ After they've reached and answered the final riddle, their final score will subm
 
 ## To initilise and edit
 
-1. Open up GITBASH
-2. Use ls to navigate to your working directory
-3. Type: npm install
-4. Type: npm start
+1. Download Python 3: (http://www.python.org/download/)
+2. Create a new directory to store the project 
+``` $ mkdir riddle_me_this ```
+``` $ cd riddle_me_this ```
+3. Clone the repository 
+``` $ git clone <https://github.com/DeanFlint/riddle-me-this.git>```
+4. After you've that you'll need to make sure that you have **npm** installed. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
+``` $ npm install ```
+``` $ npm start ```
+5. Create and activate your virtual env:
+``` $ python3 -m venv env ```
+``` $ source env/bin/activate ```
+6. Install Flask with pip:
+``` (env)$ pip install flask==0.12.2 ```
+7. Run the python file:
+``` python3 app.py ```
 
 ## Features
 #### Existing Features
-#### Features Left to Implement
 - Username form
 - A scoreboard
 - Riddle-image generator
@@ -41,16 +52,3 @@ After they've reached and answered the final riddle, their final score will subm
 #### Some of the tech used includes:
 - **Flask** A Python based micro-framework used to serve the data from the server to the web based interface.
 - **Bootstrap 4** I used **Bootstrap** to give my project a simple, responsive layout.
-
-## Contributing
-#### Getting the code up and running
-1. Firstly you will need to clone this repository by running the ```git clone <https://github.com/DeanFlint/riddle-me-this.git>``` command
-2. After you've that you'll need to make sure that you have **npm** installed. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
-3. Once **npm** , you'll need to install all of the dependencies in *package.json*.
-```
-npm install
-```
-4. After those dependencies have been installed you'll need to make sure that you have **http-server** installed. You can install this by running the following: ```npm install -g http-server # this also may require sudo on Mac/Linux```
-5. Once **http-server** is installed run ```http-server -c-1```
-6. The project will now run on [localhost](http://127.0.0.1:8080)
-7. Make changes to the code and if you think it belongs in here then just submit a pull request
