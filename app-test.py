@@ -11,12 +11,6 @@ class BasicTestCase(unittest.TestCase):
         response = test1.get('/', content_type='html/text')
         self.assertEqual(response.status_code, 200)
         
-    def test_challenge(self):
-        """Route Testing"""
-        test2 = app.test_client(self)
-        response = test2.get('/challenge', content_type='html/text')
-        self.assertEqual(response.status_code, 200)
-        
     def test_scoreboard(self):
         """Route Testing"""
         test3 = app.test_client(self)

@@ -54,8 +54,10 @@ def add_to_score():
   
     
 def final_score(username, score):
+    """ If both username and score has text, submit to txt file, otherwise return """
     if username != "" and score != "":
         with open("data/scores.txt", "a") as file:
+            """ If a single digit score, format it so it will be sorted as an int (09 rather than 9) """
             if int(score) > 0 and int(score) < 10:
                 score = "0" + str(score)
             file.writelines(str(score) + "\n")
@@ -68,48 +70,66 @@ def get_scores():
     usernames = []
     scores = []
     
+    """ Open the scores.txt file and split each line"""
     with open("data/scores.txt", "r") as file:
         lines = file.read().splitlines()
-        
+    
+    """ Add the scores (on each even number line) to the empty score list"""
+    """ Add the usernames (on each odd number line) to the empty username list """
     for i, text in enumerate(lines):
         if i%2 ==0:
             scores.append(text)
         else:
             usernames.append(text)
     
-    usernames_and_scores = zip(usernames, scores)
-    usernames_and_scores.sort(key=itemgetter(1), reverse=True)
+    """ Zip the two lists, sort them by scores in reverse """
+    usernames_and_scores = sorted(zip(usernames, scores), key=lambda x: x[1], reverse=True)
     return usernames_and_scores
 
 
 @app.route('/', methods=["GET", "POST"])
 def index():
+    """ Clear the answers.txt file so attempts_remaining and score is correct """
     clear_answers()
     score = 0
     """Handle POST request"""
     if request.method == "POST":
-        write_to_file("data/users.txt", request.form["username"] + "\n")
         username = request.form["username"]
-        return redirect(url_for('user', username=username, score=score))
+        """ To make sure that a username has been entered """
+        if username == "":
+            """ If empty, render the index template again """
+            return render_template("index.html")
+        else:
+            """ Grab the username from the form and score to pass through the redirect """
+            return redirect(url_for('user', username=username, score=score))
     return render_template("index.html")
 
 
 @app.route('/<username>/riddle1/<int:score>', methods=["GET", "POST"])
 def user(username, score):
+    """ User starts with 5 attempts per riddle """
     rem_attempts = 5
     if request.method == "POST":
-        write_to_file("data/guesses.txt", request.form["answer"] + "\n")
+        """ Add response to the guesses.txt file """
         guess = request.form["answer"]
+        write_to_file("data/guesses.txt", guess + "\n")
+        """ Grab the riddle answers from the answers.txt file """
         answers = riddle_answers()
+        """ If the guess matches the answer, calculate the score for the round """
         if answers[0] == guess:
             score = score + add_to_score()
+            """ Clear the guesses.txt file for the next riddle """
             clear_answers()
+            """ Take the user to the next riddle, pass on the username and their score with them """
             return redirect(url_for('riddle2', username=username, score=score))
         else:
+            """ If answer is incorrect and the number of attempts they've had is over 5, take them to the next riddle"""
             if num_of_attempts() > 4:
+                """ Clear the guesses.txt file for the next riddle """
                 clear_answers()
                 return redirect(url_for('riddle2', username=username, score=score))
             else:
+                """ If answer is incorrect but they've not had more than 5 attempts, reload the current riddle """
                 return render_template("riddle1.html", username=username, attempts=get_all_attempts(), rem_attempts=attempts_rem(), score=score)
     return render_template("riddle1.html", username=username, rem_attempts=rem_attempts, score=score)
 

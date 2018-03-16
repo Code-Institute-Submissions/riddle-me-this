@@ -22,5 +22,3 @@ erin
 bob
 19
 judy
-25
-rwrwer
