@@ -30,4 +30,4 @@ gulp.task('fa', function(){
 });
 
 // When we run Gulp, these are what will be ran
-gulp.task('default', ['js', 'fa', 'fonts']);
+gulp.task('default', ['sass', 'js', 'fa', 'fonts']);

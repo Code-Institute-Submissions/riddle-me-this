@@ -7,6 +7,8 @@
 	<meta http-equiv="X-UA-Compatible"
 		content="ie=edge">
 	<title>Riddle Me This</title>
+	<link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
 	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
@@ -16,7 +18,7 @@
 <header>
     <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-grey mb-5">
         <div class="container">
-          <a class="navbar-brand p-1 m-1" href="#">Riddle Me This</a>
+          <a class="navbar-brand p-1 m-1" href="{{ url_for('index') }}" >Riddle Me This</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
@@ -36,7 +38,7 @@
   <div class="row">
     
     <div class="col-md-8 m-auto">
-      <h1 class="page-title">Scoreboard {{test}}</h1>
+      <h2 class="page-title">Scoreboard</h2>
         <table class="table table-striped">
             <thead>
                 <tr>
