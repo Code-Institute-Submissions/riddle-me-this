@@ -6,3 +6,4 @@ static/js/bootstrap.min.js
 static/js/jquery.min.js
 static/js/popper.min.js
 package.json
+gulpfile.js
