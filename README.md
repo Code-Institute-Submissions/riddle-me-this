@@ -1,27 +1,31 @@
-# Pratical Python Project
+# Riddle Me This
 
-## Overview
+## Getting Started
 
-#### What is the purpose of this web app?
+This logic-driven web application is a quiz game that will generate a riddle for the user to work out.
 
-This is a quiz game that will generate a riddle for the user to work out.
+The user will submit answers for what they think the answer of the riddle is. If they guess correctly, they'll progress to the next one. If they guess incorrectly, they'll can guess again.
 
+For each riddle, if the user submits the correct answer for the riddle on their first attempt, they'll score 5 points and progress to the next answer. If they guess incorrectly, they'll lose a point from the points that they can win that round. Each guess would take away another possible mark until they get to 0 which will then take them to the next riddle. After they've reached and answered the final riddle, their final score will submit to the scoreboard.
 
-#### What does it do?
+This has been written in Python(Flask), HTML, CSS and JavaScript. 
 
-The user will submit answers for what they thing the answer of the riddle is.
+## Prerequisites
 
-If they guess correctly, they'll progress to the next one. If they guess incorrectly, they'll can guess again.
+The list of tech used includes:
 
-#### How does it work?
-
-For each riddle, if the user submits the correct answer for the riddle on their first attempt, they'll score 5 points and progress to the next answer.
-
-If they guess incorrectly, they'll lose a point from the points that they can win that round.
-
-Each guess would take away another possible mark until they get to 0 which will then take them to the next riddle.
-
-After they've reached and answered the final riddle, their final score will submit to the scoreboard.
+- [Flask](http://flask.pocoo.org/)
+    - I used **Flask** (which is a python microframework) to render pages and manage the functionality.
+- [Bootstrap](http://getbootstrap.com/)
+    - I used **Bootstrap** to give my project a simple, responsive layout
+- [npm](https://www.npmjs.com/)
+    - I used **npm** to help manage some of the dependencies in our application
+- [gulp](https://gulpjs.com/)
+    - **Gulp** is used to manage the tasks of running the scss and moving files from Node Modules to my project folders.
+- [font-awesome](http://fontawesome.io/)
+    - I used **font-awesome** to include images for icons.
+- [Google Fonts](https://fonts.google.com/) 
+    - **Google Fonts** is used to style the text in my site.
 
 ## To initilise and edit
 
@@ -41,15 +45,16 @@ After they've reached and answered the final riddle, their final score will subm
 
 ``` $ npm start ```
 
+
 5. Create and activate your virtual env:
 
 ``` $ python -m venv env ```
 
 ``` $ source env/Scripts/activate ```
 
-6. Install Flask with pip:
+6. Install requirements with pip:
 
-``` (env)$ pip install flask ```
+``` (env)$ pip install -r requirements.txt ```
 
 7. Open app.py using a text editor to amend the port number on the bottom line, for example:
 
@@ -59,13 +64,32 @@ After they've reached and answered the final riddle, their final score will subm
 
 ``` python app.py ```
 
-## Features
-#### Existing Features
-- Username form
-- A scoreboard
-- Riddle-image generator
+## Running the tests
 
-## Tech Used
-#### Some of the tech used includes:
-- **Flask** A Python based micro-framework used to serve the data from the server to the web based interface.
-- **Bootstrap 4** I used **Bootstrap** to give my project a simple, responsive layout.
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+TO DO
+```
+
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+* **Dean Flint** - *Initial work* - [Dean Flint](https://github.com/DeanFlint)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* The good people at CodeInstitute!
+
+* Derek Hyland
