@@ -27,6 +27,10 @@ The list of tech used includes:
 - [Google Fonts](https://fonts.google.com/) 
     - **Google Fonts** is used to style the text in my site.
 
+## WireFrame
+
+Click [here](wireframe.pdf) to view the wireframe of this project.
+
 ## To initilise and edit
 
 1. Download Python 3: (http://www.python.org/download/)
