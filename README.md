@@ -1,12 +1,19 @@
-# Riddle Me This
+# Riddle Me This 
+
+[![Build Status](https://travis-ci.org/DeanFlint/riddle-me-this.svg?branch=master)](https://travis-ci.org/DeanFlint/riddle-me-this)
 
 ## Getting Started
 
 This logic-driven web application is a quiz game that will generate a riddle for the user to work out.
 
-The user will submit answers for what they think the answer of the riddle is. If they guess correctly, they'll progress to the next one. If they guess incorrectly, they'll can guess again.
+The user will submit answers for what they think the answer of the riddle is. If they guess correctly, 
+they'll progress to the next one. If they guess incorrectly, they'll can guess again.
 
-For each riddle, if the user submits the correct answer for the riddle on their first attempt, they'll score 5 points and progress to the next answer. If they guess incorrectly, they'll lose a point from the points that they can win that round. Each guess would take away another possible mark until they get to 0 which will then take them to the next riddle. After they've reached and answered the final riddle, their final score will submit to the scoreboard.
+For each riddle, if the user submits the correct answer for the riddle on their first attempt, 
+they'll score 5 points and progress to the next answer. If they guess incorrectly, they'll lose a 
+point from the points that they can win that round. Each guess would take away another possible mark 
+until they get to 0 which will then take them to the next riddle. After they've reached and answered 
+the final riddle, their final score will submit to the scoreboard.
 
 This has been written in Python(Flask), HTML, CSS and JavaScript. 
 
@@ -66,7 +73,7 @@ Click [here](wireframe.pdf) to view the wireframe of this project.
 
 8. Run the python file:
 
-``` python app.py ```
+``` python3 app.py ```
 
 ## Running the tests
 
