@@ -1,4 +1,4 @@
-# Riddle Me This 
+# Riddle Me This - Project 2
 
 [![Build Status](https://travis-ci.org/DeanFlint/riddle-me-this.svg?branch=master)](https://travis-ci.org/DeanFlint/riddle-me-this)
 
