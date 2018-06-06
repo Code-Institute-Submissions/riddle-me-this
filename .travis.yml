@@ -3,4 +3,6 @@ python:
 - "3.4"
 install: "pip install -r requirements.txt"
 script:
-- python app.py test
+- python -m venv env
+- source env/Scripts/activate
+- python app.py
