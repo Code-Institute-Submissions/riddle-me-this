@@ -222,4 +222,4 @@ def scoreboard():
     return render_template("scoreboard.html", usernames_and_scores=usernames_and_scores)
 
 
-app.run(host=os.getenv('IP'), port=int('5005'), debug=True)
+app.run(host=os.getenv('IP'), port=int(5005), debug=True)

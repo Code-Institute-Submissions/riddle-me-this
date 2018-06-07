@@ -1,7 +1,5 @@
 # Riddle Me This - Project 2
 
-[![Build Status](https://travis-ci.org/DeanFlint/riddle-me-this.svg?branch=master)](https://travis-ci.org/DeanFlint/riddle-me-this)
-
 ## Getting Started
 
 This logic-driven web application is a quiz game that will generate a riddle for the user to work out.
@@ -73,7 +71,7 @@ Click [here](wireframe.pdf) to view the wireframe of this project.
 
 8. Run the python file:
 
-``` python3 app.py ```
+``` python app.py ```
 
 ## Running the tests
 
