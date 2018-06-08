@@ -73,15 +73,9 @@ Click [here](wireframe.pdf) to view the wireframe of this project.
 
 ``` python app.py ```
 
-## Running the tests
+## Testing
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-TO DO
-```
+Click [here](../tests) to view the my testing of this project.
 
 
 ## Contributing
