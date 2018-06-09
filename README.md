@@ -39,6 +39,7 @@ The list of tech used includes:
 
 Click [here](wireframe.pdf) to view the wireframe of this project.
 
+
 ### To initilise and edit
 
 1. Download Python 3: (http://www.python.org/download/)
