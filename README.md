@@ -1,6 +1,7 @@
 # Riddle Me This - Project 2
 
-## Getting Started
+
+### Description
 
 This logic-driven web application is a quiz game that will generate a riddle for the user to work out.
 
@@ -15,7 +16,8 @@ the final riddle, their final score will submit to the scoreboard.
 
 This has been written in Python(Flask), HTML, CSS and JavaScript. 
 
-## Prerequisites
+
+### Built with...
 
 The list of tech used includes:
 
@@ -32,11 +34,12 @@ The list of tech used includes:
 - [Google Fonts](https://fonts.google.com/) 
     - **Google Fonts** is used to style the text in my site.
 
-## WireFrame
+
+### WireFrame
 
 Click [here](wireframe.pdf) to view the wireframe of this project.
 
-## To initilise and edit
+### To initilise and edit
 
 1. Download Python 3: (http://www.python.org/download/)
 
@@ -73,23 +76,21 @@ Click [here](wireframe.pdf) to view the wireframe of this project.
 
 ``` python app.py ```
 
-## Testing
+
+### Testing
 
 Click [here](../tests) to view the my testing of this project.
 
 
-## Contributing
+### Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Authors
+
+### Authors
 
 * **Dean Flint** - *Initial work* - [Dean Flint](https://github.com/DeanFlint)
 
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
